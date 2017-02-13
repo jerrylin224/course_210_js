@@ -1,0 +1,4 @@
+function union() {
+  var newArray = []
+  
+}
