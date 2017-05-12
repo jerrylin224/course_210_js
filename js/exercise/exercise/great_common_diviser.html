@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Great Common Diviser</title>
+</head>
+<body>
+  <script>
+    function gcd(num1, num2) {
+      while(num2 !== 0) {
+        var temp = num2;
+        num2 = num1 % num2;
+        num1 = temp;
+      }
+
+      return num1;
+    }
+
+    // use temp to store the num1 or num2. If the condition doesn't fit, the code will keep running until right answer return.
+    // the purpose of temp is to store the num and make it switch
+  </script>
+</body>
+</html>
