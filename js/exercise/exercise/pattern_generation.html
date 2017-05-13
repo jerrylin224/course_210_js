@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pattern Generation</title>
+</head>
+<body>
+  <script>
+    function generatePattern(num) {
+      var string = '';
+      for (var i = 1; i <= num; i++) {
+        for (var j = 1; j <= i; j++) {
+          string += j;
+        }
+
+        for (var k = num - i; k >= 1; k--) {
+          string += '*';
+        }
+      }
+      console.log(string);
+    }
+
+    generatePattern(8);
+  </script>
+</body>
+</html>
+
+<!-- Write a function that takes a number of rows as the argument n and logs a square of numbers and asterisks. For example, if n = 7, log the following pattern:
+
+generatePattern(7);
+
+// console output
+1******
+12*****
+123****
+1234***
+12345**
+123456*
+1234567 -->
