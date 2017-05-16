@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Substring(1)</title>
+</head>
+<body>
+  <script>
+    function substr(string, start, length) {
+      var newString = '';
+      var index;
+
+      if (start < 0) {
+        start = string.length + start;
+      }
+
+      for (var i = 0; i < length; i++) {
+        index = start + i;
+
+        if (string[index] === undefined) {
+          break;
+        }
+
+        newString += string[index];
+      }
+
+      return newString;
+    }
+  </script>
+</body>
+</html>
