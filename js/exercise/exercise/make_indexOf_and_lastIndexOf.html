@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Array Operations: indexOf and lastIndexOf</title>
+</head>
+<body>
+  <script>
+    // indexOf
+    function indexOf(array, value) {
+      for (var i = 0; i < array.length; i++) {
+        if (array[i] === value) {
+          return i;
+            }
+        }
+
+      return -1;
+    }
+
+    // lastIndexOf
+    function lastIndexOf(array, value) {
+      for (var i = array.length; i >= 0; i--) {
+        if (array[i] === value) {
+          return i;
+            }
+        }
+
+      return -1;
+    }
+    </script>
+</body>
+</html>
