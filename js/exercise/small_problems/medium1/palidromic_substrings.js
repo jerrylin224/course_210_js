@@ -31,3 +31,11 @@ function palindromes(string) {
 function isPalindrome(word) {
   return word.length > 1 && word === word.split('').reverse().join('');
 }
+
+
+function palindromes(str) {
+  return substrings(str).filter(function(n) {
+    return n.length > 1 && n.split('').reverse().join('') === n
+        
+    });
+}

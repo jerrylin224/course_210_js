@@ -22,3 +22,14 @@ function StringToNumber(string) {
 
   return result;
 }
+
+
+function stringToInteger(str) {
+  var DIGITS = {'0' : 0, '1' : 1, '2' : 2,　'3' : 3,　'4' : 4,　'5' : 5
+    ,　'6' : 6,　'7' : 7,　'8' : 8,　'9' : 9};
+  var num = 0;
+  for (var i = 0; i < str.length; i++) {
+    num = num * 10 + DIGITS[str[i]];
+    }
+  return num;
+}

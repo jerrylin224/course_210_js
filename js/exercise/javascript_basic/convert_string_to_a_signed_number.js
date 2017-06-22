@@ -23,10 +23,10 @@ function StringToNumber(string) {
   return result;
 }
 
-function stringToSignedInteger(string)
-  switch(string[0]) {
-    case '+': return StringToInteger(string.slice(1));
-    case '-': return -StringToInteger(string.slice(1));
-    default: return StringToInteger(s
+function stringToSignedInteger(string) {
+  switch (string[0]) {
+    case '-': return -stringToInteger(string.slice(1));
+    case '+': return stringToInteger(string.slice(1));
+    default:  return stringToInteger(string);
   };
 }

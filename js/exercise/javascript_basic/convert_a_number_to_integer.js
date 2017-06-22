@@ -1,15 +1,15 @@
-var DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
-
-
-function integerToString(number) {
+function integerToString(num) {
+  var DIGITS = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'];
   var result = "";
-  var remainder;
-  do {
-    remainder = number % 10;
-    number = Math.floor(number / 10);
-    result = DIGITS[remainder] + result;
-  } while number > 0
+  var digit;
+  if (num === 0) {
+    result = DIGITS[num]
+  }
+  while (num > 0) {
+    digit = num % 10;
+    num = Math.floor(num / 10);
+    result = DIGITS[digit] + result;
+    }
 
   return result;
-
 }

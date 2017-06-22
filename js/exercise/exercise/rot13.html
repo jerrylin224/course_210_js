@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rot13</title>
+</head>
+<body>
+  <script>
+    function rot13(str) {
+      var CONVERSION_OFFSET = 13;
+      var newStr = '';
+      var charCode;
+
+      for (var i = 0; i < str.length; i++) {
+        charCode = str.charCodeAt(i)
+
+        if ( (charCode >= 65 && charCode <= 77) || (charCode >= 97 && charCode <= 109 )) {
+          charCode += CONVERSION_OFFSET;
+        } else if ((charCode >= 78 && charCode <= 90) || (charCode >= 110 && charCode <= 122)) {
+          charCode -= CONVERSION_OFFSET;
+        }
+
+        newStr += String.fromCharCode(charCode);
+      }
+      
+      return newStr;
+    }
+  </script>
+</body>
+</html>
+
+<!-- https://launchschool.com/posts/a07b3bbe -->
