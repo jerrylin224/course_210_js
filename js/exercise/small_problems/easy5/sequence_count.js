@@ -6,3 +6,8 @@ function sequence(num, times) {
 
   return newArray;
 }
+
+function sequence(time, num) {
+  var mapArray = Array(time).fill(num);
+    return mapArray.map((value, index) => value * (index + 1));
+}
