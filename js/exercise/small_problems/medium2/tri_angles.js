@@ -5,11 +5,11 @@ function triangle(angle1, angle2, angle3) {
 
   if (angle1 === 90 || angle2 === 90 || angle3 === 90) {
     return 'right';
-    } else if (Math.max(angle1, angle2, angle3) > 90) {
+  } else if (Math.max(angle1, angle2, angle3) > 90) {
     return 'obtuse';
-    } else if (Math.max(angle1, angle2, angle3) < 90) {
+  } else if (Math.max(angle1, angle2, angle3) < 90) {
     return 'acute';
-    }
+  }
 }
 
 function sumAngles(angle1, angle2, angle3) {

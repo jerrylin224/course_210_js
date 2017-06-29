@@ -49,3 +49,4 @@ wordToDigit('Please call me at five five five one two three four. Thanks.');
 // Use regex obj to select each letter
 // Use replace to convert the letter to integer
 // return the final converted sentence
+
