@@ -20,7 +20,7 @@ function flatten(array) {
 
   separateDuplicatedEl(converted, notDuplicatedIdx, duplicatedElement)
 
-  getfirstIdxOfDuplicatedOfDuplicated(firstIdxOfDuplicated, duplicatedElement, converted);
+  getfirstIdxOfDuplicated(firstIdxOfDuplicated, duplicatedElement, converted);
 
   return getResult(firstIdxOfDuplicated, notDuplicatedIdx, concatenated, result);
 }
@@ -36,11 +36,11 @@ function separateDuplicatedEl(converted, notDuplicatedIdx, duplicatedElement) {
   });
 }
 
-function getfirstIdxOfDuplicatedOfDuplicated(firstIdxOfDuplicated, duplicatedElement, convertedArr) {
+function getfirstIdxOfDuplicated(firstIdxOfDuplicated, duplicatedElement, convertedArr) {
   duplicatedElement.forEach(function(element) {
     if (!firstIdxOfDuplicated.includes(convertedArr.indexOf(element))) {
       firstIdxOfDuplicated.push(convertedArr.indexOf(element))
-      }
+    }
   })
 }
 
