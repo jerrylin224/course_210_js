@@ -9,16 +9,19 @@
 // Write a program that takes one argument, total number of switches, 
 // and returns an array of lights that are on after n repetitions.
 
-// Model
-// lightsOn(5) a (random as argument)
-// [1, 4]        (on light remained)
+// input: number (positive integer)
+// output: array (swithced on lights)
 
-// Requirment
+// Requirement
 // all light are off(total n lights)
 // iterate from 1 to argument
 // toggle the light based on the multiple of the index
 // get the on light after iteration (from 1 to given argument)
 
+
+// Model
+// lightsOn(5) a (random number as argument)
+// [1, 4]        (on light remained)
 
 // Example
 // lightsOn(5);   // [1, 4];
@@ -28,7 +31,10 @@
 
 // Data
 // input: number positive
-// output: array (collection of switched on light)
+// rule:
+// - use object to store the light number and state {1: false}
+// - Use Object.keys(obj) as array to iterate
+
 
 // Edge case
 
@@ -67,11 +73,9 @@ function lightsOn(n) {
     }
   });
 
-  collection.forEach(function(el) {
-    collectionInNum.push(Number(el));
-  });
+  collection = collection.map(el => Number(el))
 
-  return collectionInNum;
+  return collection;
 }
 
 
